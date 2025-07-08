@@ -1,51 +1,221 @@
-<div class="container">
-    <div id="password-form">
-        <h2>Enter Password</h2>
-        <input type="password" id="password-input" placeholder="Password">
-        <button id="submit-button">Submit</button>
-        <p id="error-message" class="hidden-content">Incorrect password. Please try again.</p>
-    </div>
-    <div id="content" class="hidden-content">
-        <!-- Protected content goes here -->
-        <h1 class="header-text">SAVE THE DATE</h1>
-        <p class="date-text">10.25.2025</p>
-        <p class="names-text">
-            MEGAN MCGEE &<br>
-            IAN SIGSWORTH
-        </p>
-        <p class="address-text">
-            Grey LB<br>
-            237 Long Beach Blvd<br>
-            Long Beach, CA 90802
-        </p>
-    </div>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const passwordInput = document.getElementById('password-input');
-    const submitButton = document.getElementById('submit-button');
-    const passwordForm = document.getElementById('password-form');
-    const content = document.getElementById('content');
-    const errorMessage = document.getElementById('error-message');
-
-    const correctPassword = 'milano';
-
-    const checkPassword = () => {
-        if (passwordInput.value === correctPassword) {
-            passwordForm.classList.add('hidden-content');
-            content.classList.remove('hidden-content');
-        } else {
-            errorMessage.classList.remove('hidden-content');
-            passwordInput.value = '';
-            passwordInput.focus();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The Date</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
-    };
-
-    submitButton.addEventListener('click', checkPassword);
-    passwordInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            checkPassword();
+        .background-art {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            width: 650px;
+            max-width: 90vw;
+            height: auto;
+            opacity: 0.15;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            user-select: none;
         }
-    });
-});
-</script>
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        #content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .header-text {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .date-text {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 40px;
+            color: #666;
+        }
+        .names-text {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+        .address-text {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        .details-soon {
+            font-size: 1rem;
+            color: #222;
+            font-style: italic;
+            margin-top: 30px;
+            letter-spacing: 0.5px;
+        }
+        /* Modal Styles */
+        .modal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.3);
+        }
+        .modal-content {
+            width: 100vw;
+            height: 100vh;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            box-shadow: none;
+            min-width: 0;
+            min-height: 0;
+            padding: 0;
+        }
+        .modal-content h2 {
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .modal-content input[type="password"] {
+            width: 80vw;
+            max-width: 360px;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .modal-content button {
+            width: 80vw;
+            max-width: 360px;
+            padding: 12px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .modal-content button:hover {
+            background: #333;
+        }
+        .modal-content .error {
+            color: #ff4444;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header-text {
+                font-size: 2rem;
+            }
+            .modal-content input[type="password"],
+            .modal-content button {
+                width: 90vw;
+            }
+            .background-art {
+                width: 98vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background flower art -->
+    <img src="![image1](image1)" alt="Flower Art" class="background-art">
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <h2>Enter Password</h2>
+            <div class="error" id="modalError" style="display:none;">Incorrect password. Please try again.</div>
+            <input type="password" id="modalPassword" placeholder="Password" autocomplete="off">
+            <button id="modalSubmit">Submit</button>
+        </div>
+    </div>
+
+    <div class="container" id="mainContent" style="display:none;">
+        <div id="content">
+            <h1 class="header-text">SAVE THE DATE</h1>
+            <p class="date-text">10.25.2025</p>
+            <p class="names-text">
+                MEGAN MCGEE &<br>
+                IAN SIGSWORTH
+            </p>
+            <p class="address-text">
+                Grey LB<br>
+                237 Long Beach Blvd<br>
+                Long Beach, CA 90802
+            </p>
+            <p class="details-soon">
+                Details to come — check back soon!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const passwordModal = document.getElementById('passwordModal');
+        const mainContent = document.getElementById('mainContent');
+        const modalPassword = document.getElementById('modalPassword');
+        const modalSubmit = document.getElementById('modalSubmit');
+        const modalError = document.getElementById('modalError');
+        const correctPassword = 'milano'; // Change this to your desired password
+
+        function checkModalPassword() {
+            if (modalPassword.value === correctPassword) {
+                passwordModal.style.display = 'none';
+                mainContent.style.display = 'block';
+                modalError.style.display = 'none';
+                modalPassword.value = '';
+            } else {
+                modalError.style.display = 'block';
+                modalPassword.value = '';
+                modalPassword.focus();
+            }
+        }
+
+        modalSubmit.addEventListener('click', checkModalPassword);
+        modalPassword.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                checkModalPassword();
+            }
+        });
+
+        // Focus password input when modal appears
+        window.onload = function() {
+            modalPassword.focus();
+        }
+    </script>
+</body>
+</html>
