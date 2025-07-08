@@ -1,5 +1,4 @@
-
-<!DOCTYPE Supposed to be removed html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +30,6 @@
             justify-content: center;
         }
 
-        /* Password Form Styles */
         #password-form {
             max-width: 400px;
             margin: 0 auto;
@@ -123,207 +121,19 @@
             line-height: 1.5;
         }
 
-        .event-details {
-            margin-bottom: 40px;
-            text-align: left;
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 8px;
-        }
-
-        .event-details p {
-            margin-bottom: 8px;
-            font-size: 15px;
-        }
-
-        .event-details strong {
-            color: #000;
-            font-weight: 500;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 400;
-            margin: 50px 0 20px 0;
-            text-align: left;
-        }
-
-        .text-content {
-            text-align: left;
-            color: #666;
-            font-size: 15px;
-            margin-bottom: 30px;
-        }
-
-        .text-content h3 {
-            color: #000;
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin: 25px 0 15px 0;
-        }
-
-        .text-content ul {
-            list-style: none;
-            margin: 15px 0;
-        }
-
-        .text-content li {
-            margin-bottom: 8px;
-            padding-left: 15px;
-            position: relative;
-        }
-
-        .text-content li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #999;
-        }
-
-        /* Form Styles */
-        .form-section {
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 40px;
-            text-align: left;
-        }
-
-        .form-section label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #000;
-            font-size: 15px;
-        }
-
-        .form-section input,
-        .form-section select {
-            width: 100%;
-            padding: 15px;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            color: #000;
-            font-size: 16px;
-            margin-bottom: 20px;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-section input:focus,
-        .form-section select:focus {
-            outline: none;
-            border-color: #000;
-        }
-
-        .form-section select {
-            cursor: pointer;
-        }
-
-        .form-section select option {
-            background: #fff;
-            color: #000;
-        }
-
-        .form-description {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        .submit-form-btn {
-            width: 100%;
-            padding: 18px;
-            background: #000;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .submit-form-btn:hover {
-            background: #333;
-            transform: translateY(-1px);
-        }
-
-        .submit-form-btn:disabled {
-            background: #ccc;
-            color: #999;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .success-message {
-            background: #e8f5e8;
-            color: #2d5a2d;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 15px;
-        }
-
-        .error-form-message {
-            background: #f5e8e8;
-            color: #5a2d2d;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 15px;
-        }
-
-        .hidden-content {
-            display: none;
-        }
-
-        /* Mobile Optimizations */
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
-
             .header-text {
                 font-size: 2rem;
                 letter-spacing: 1px;
             }
-
             .date-text {
                 font-size: 1.3rem;
             }
-
             .names-text {
                 font-size: 1.1rem;
-            }
-
-            .address-text {
-                font-size: 0.9rem;
-            }
-
-            .event-details {
-                padding: 20px;
-            }
-
-            .section-title {
-                font-size: 1.2rem;
-                margin: 30px 0 15px 0;
-            }
-
-            .form-section {
-                padding: 20px;
-            }
-
-            .text-content {
-                font-size: 14px;
-            }
-
-            .text-content h3 {
-                font-size: 1rem;
             }
         }
 
@@ -331,25 +141,11 @@
             .header-text {
                 font-size: 1.8rem;
             }
-
             .date-text {
                 font-size: 1.2rem;
             }
-
             .names-text {
                 font-size: 1rem;
-            }
-
-            .event-details {
-                padding: 15px;
-            }
-
-            .form-section {
-                padding: 15px;
-            }
-
-            .section-title {
-                font-size: 1.1rem;
             }
         }
     </style>
@@ -362,7 +158,6 @@
             <button id="submit-button">Submit</button>
             <p id="error-message" class="hidden-content">Incorrect password. Please try again.</p>
         </div>
-
         <div id="content" class="hidden-content">
             <h1 class="header-text">SAVE THE DATE</h1>
             <p class="date-text">10.25.2025</p>
@@ -375,75 +170,8 @@
                 237 Long Beach Blvd<br>
                 Long Beach, CA 90802
             </p>
-
-            <h2 class="section-title">Accommodation</h2>
-            <div class="text-content">
-                <p>Recommended accommodations for your stay:</p>
-                
-                <h3>Hotels</h3>
-                <ul>
-                    <li>The Modern Hotel Long Beach (Boutique, downtown)</li>
-                    <li>Hyatt Regency Long Beach (Waterfront views)</li>
-                    <li>Hotel Maya, DoubleTree by Hilton (Latin-inspired, waterfront)</li>
-                </ul>
-
-                <h3>Airbnb Areas</h3>
-                <ul>
-                    <li>Downtown Long Beach (Close to venue)</li>
-                    <li>Naples Island (Quiet, residential canals)</li>
-                    <li>Belmont Shore (Lively, near beach)</li>
-                </ul>
-            </div>
-
-            <h2 class="section-title">Questions?</h2>
-            <div class="text-content">
-                <p>Feel free to text us with any questions you may have:</p>
-                <p><a href="sms:+15622345094&body=Hi%20Megan,%20So%20excited%20to%20celebrate%20you%20and%20Ian.%20I%20had%20a%20few%20questions%20about%20the%20wedding."><strong>Text us your questions!</strong></a></p>
-            </div>
-
-            <div class="form-section">
-                <form id="rsvp-form">
-                    <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" name="last-name" required>
-
-                    <label for="guest-count">Number of Guests *</label>
-                    <input type="number" id="guest-count" name="guest-count" min="1" required>
-
-                    <label for="burrito-protein">Burrito Choice *</label>
-                    <p class="form-description">Homemade flour tortilla with melted jack cheese, chunky guacamole, pinto beans and spicy chiltepin salsa.</p>
-                    <select id="burrito-protein" name="burrito-protein" required>
-                        <option value="">Select protein</option>
-                        <option value="steak">Steak (Most Popular)</option>
-                        <option value="chicken">Chicken</option>
-                        <option value="steak-poblano">Steak with Poblano</option>
-                        <option value="poblano-bean">Poblano and Bean</option>
-                        <option value="chorizo">Chorizo</option>
-                        <option value="other">Other</option>
-                    </select>
-
-                    <label for="pie-choice">Pie Choice *</label>
-                    <select id="pie-choice" name="pie-choice" required>
-                        <option value="">Select your pie</option>
-                        <option value="marionberry-vegan">Marionberry (vegan)</option>
-                        <option value="cherry-amaretto-vegan">Cherry Amaretto (vegan)</option>
-                        <option value="dutch-apple">Dutch Apple</option>
-                        <option value="key-lime">Key Lime</option>
-                        <option value="pumpkin">Pumpkin</option>
-                        <option value="sweet-potato">Sweet Potato</option>
-                        <option value="bourbon-pecan">Bourbon Pecan</option>
-                        <option value="mississippi-mudd">Mississippi Mudd</option>
-                        <option value="ube-coconut-cheesecake">Ube Coconut Cheesecake</option>
-                        <option value="salted-caramel-gf">Salted Caramel (gluten free)</option>
-                    </select>
-
-                    <button type="submit" class="submit-form-btn" id="submit-rsvp">Submit RSVP</button>
-                </form>
-                
-                <div id="form-message" class="hidden-content"></div>
-            </div>
         </div>
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const passwordInput = document.getElementById('password-input');
@@ -451,21 +179,17 @@
             const passwordForm = document.getElementById('password-form');
             const content = document.getElementById('content');
             const errorMessage = document.getElementById('error-message');
-            const rsvpForm = document.getElementById('rsvp-form');
-            const submitRsvpBtn = document.getElementById('submit-rsvp');
-            const formMessage = document.getElementById('form-message');
 
-            const correctPassword = 'milano'; // Your correct password
+            const correctPassword = 'milano';
 
-            // Password functionality
             const checkPassword = () => {
                 if (passwordInput.value === correctPassword) {
                     passwordForm.classList.add('hidden-content');
                     content.classList.remove('hidden-content');
                 } else {
                     errorMessage.classList.remove('hidden-content');
-                    passwordInput.value = ''; // Clear the input field
-                    passwordInput.focus(); // Keep focus on the input
+                    passwordInput.value = '';
+                    passwordInput.focus();
                 }
             };
 
@@ -474,60 +198,6 @@
                 if (e.key === 'Enter') {
                     checkPassword();
                 }
-            });
-
-            // Form submission functionality
-            rsvpForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const formData = new FormData(rsvpForm);
-                const data = Object.fromEntries(formData);
-                
-                // Create email body
-                const emailBody = `
-New RSVP Submission:
-
-Last Name: ${data['last-name']}
-Number of Guests: ${data['guest-count']}
-Burrito Choice: ${data['burrito-protein']}
-Pie Choice: ${data['pie-choice']}
-
-Submitted on: ${new Date().toLocaleString()}
-                `.trim();
-
-                // Create mailto link
-                const recipientEmail = 'isigswoth90@gmai.com'; // Updated recipient email
-                const subject = encodeURIComponent('Wedding RSVP - ' + data['last-name']);
-                const body = encodeURIComponent(emailBody);
-                const mailtoLink = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
-
-                // Disable submit button
-                submitRsvpBtn.disabled = true;
-                submitRsvpBtn.textContent = 'Sending...';
-
-                try {
-                    // Open email client
-                    window.location.href = mailtoLink;
-                    
-                    // Show success message
-                    formMessage.innerHTML = '<div class="success-message">Your RSVP has been prepared! Please send the email that opened in your email client.</div>';
-                    formMessage.classList.remove('hidden-content');
-                    
-                    // Reset form
-                    rsvpForm.reset();
-                    
-                } catch (error) {
-                    console.error('Error:', error);
-                    formMessage.innerHTML = '<div class="error-form-message">There was an error preparing your RSVP. Please try again.</div>';
-                    formMessage.classList.remove('hidden-content');
-                }
-                
-                // Re-enable submit button and hide message after a delay
-                setTimeout(() => {
-                    submitRsvpBtn.disabled = false;
-                    submitRsvpBtn.textContent = 'Submit RSVP';
-                    formMessage.classList.add('hidden-content'); // Hide message after 5 seconds
-                }, 5000); // 5 seconds
             });
         });
     </script>
