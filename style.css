@@ -1,0 +1,50 @@
+:root {
+  --wine: #8B1E3F;
+}
+
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Tan Pearl';
+  src: url('/tan-pearl.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Belleza';
+  src: url('/Belleza.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Forum';
+  src: url('/Forum.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #fff8f5;
+  color: var(--wine);
+  font-family: 'Belleza', 'Forum', sans-serif;
+}
+
+/* Header uses Tan Pearl */
+h1, .header {
+  font-family: 'Tan Pearl', 'Belleza', 'Forum', sans-serif;
+  color: var(--wine);
+  letter-spacing: 2px;
+}
+
+/* Subheadings use Belleza, fallback to Forum */
+h2, h3, h4, h5, h6 {
+  font-family: 'Belleza', 'Forum', sans-serif;
+  color: var(--wine);
+}
+
+/* Accent or alternative text uses Forum */
+.accent, .alt-font {
+  font-family: 'Forum', 'Belleza', sans-serif;
+  color: var(--wine);
+}
