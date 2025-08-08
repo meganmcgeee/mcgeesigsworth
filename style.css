@@ -2,30 +2,10 @@
   --wine: #8B1E3F;
 }
 
-/* Font Face Declarations */
-@font-face {
-  font-family: 'Tan Pearl';
-  src: url('/tan-pearl.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Belleza';
-  src: url('/Belleza.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Forum';
-  src: url('/Forum.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+/* Font Face Declarations are now in index.html */
 
 body {
-  background: #fff8f5;
+  background: white;
   color: var(--wine);
   font-family: 'Belleza', 'Forum', sans-serif;
 }
