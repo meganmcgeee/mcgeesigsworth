@@ -1189,14 +1189,15 @@
     <div class="cabernet-section" data-section="rsvp">
         <div class="cabernet-content">
             <p class="cabernet-description">
-                Join us for an evening of fine wine and cherished moments. 
+                Join us for an evening of celebration and cherished moments. 
                 Let us know if you'll be celebrating with us.
             </p>
             
             <form class="rsvp-form" id="rsvpForm">
                 <div class="form-group">
                     <label for="guestName">Your Name(s)</label>
-                    <input type="text" id="guestName" name="guestName" placeholder="Enter your name(s)" required>
+                    <input type="text" id="guestName" name="guestName" placeholder="Enter your name(s)" required 
+                       autocomplete="name" inputmode="text" enterkeyhint="next">
                 </div>
                 
 
@@ -1227,7 +1228,8 @@
                 
                 <div class="form-group">
                     <label for="message">Anything we should know? (dietary needs, special requests, etc.)</label>
-                    <textarea id="message" name="message" placeholder="Any special notes..." rows="4"></textarea>
+                    <textarea id="message" name="message" placeholder="Any special notes..." rows="4" 
+                          inputmode="text" enterkeyhint="done" autocomplete="off"></textarea>
                 </div>
                 
                 <button type="submit" class="submit-btn">Send Response</button>
@@ -1374,6 +1376,9 @@
                     // Enable navigation (but it will only show on scroll)
                     const mainNav = document.getElementById('mainNav');
                     mainNav.style.display = 'block';
+                    
+                    // Scroll to top after password entry
+                    window.scrollTo(0, 0);
                     
                     // Smooth transition in for main content
                     setTimeout(() => {
@@ -1535,6 +1540,33 @@
                 nav.classList.remove('scrolled');
             }
         }
+
+        // Improve mobile form interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure page starts at top
+            window.scrollTo(0, 0);
+            
+            // Improve mobile keyboard behavior for form inputs
+            const formInputs = document.querySelectorAll('input[type="text"], textarea');
+            formInputs.forEach(input => {
+                // Force focus and keyboard on mobile
+                input.addEventListener('touchstart', function(e) {
+                    // Small delay to ensure touch is registered
+                    setTimeout(() => {
+                        this.focus();
+                        // Trigger click to ensure keyboard appears
+                        if (window.innerWidth <= 768) {
+                            this.click();
+                        }
+                    }, 100);
+                });
+                
+                // Ensure proper focus
+                input.addEventListener('focus', function() {
+                    this.style.transform = 'none'; // Prevent any transform issues
+                });
+            });
+        });
         
         // Success Modal Functions
         function showSuccessModal() {
