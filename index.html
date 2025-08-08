@@ -16,18 +16,27 @@
     <!-- Open Graph / Facebook / Instagram -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://meganandian.com/">
-    <meta property="og:title" content="Megan & Ian's Wedding - October 25, 2025 | Long Beach, CA">
-    <meta property="og:description" content="Join us for our wedding celebration at Grey LB in Long Beach! 💕 Ceremony at 4:30 PM, reception at 6:00 PM. RSVP and find all details here. We can't wait to celebrate with you!">
+    <meta property="og:title" content="Megan & Ian's Wedding - October 25, 2025">
+    <meta property="og:description" content="Join us for our wedding celebration at Grey LB in Long Beach! 💕 Ceremony at 4:30 PM, reception at 6:00 PM. RSVP and find all details here.">
     <meta property="og:image" content="https://meganandian.com/image.png">
-    <meta property="og:image:alt" content="Megan and Ian - Beautiful couple photo for their October 25, 2025 wedding in Long Beach, California">
+    <meta property="og:image:secure_url" content="https://meganandian.com/image.png">
+    <meta property="og:image:url" content="https://meganandian.com/image.png">
+    <meta property="og:image:alt" content="Megan and Ian - Beautiful couple photo for their October 25, 2025 wedding">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    
+    <!-- Additional image for square Instagram posts -->
+    <meta property="og:image" content="https://meganandian.com/image.png">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="1080">
     <meta property="og:site_name" content="Megan & Ian's Wedding">
     <meta property="og:locale" content="en_US">
-    <meta property="og:updated_time" content="2025-01-08T00:00:00Z">
-    <meta property="article:author" content="Megan McGee & Ian Sigsworth">
-    <meta property="article:published_time" content="2025-01-08T00:00:00Z">
+    
+    <!-- Instagram specific -->
+    <meta name="instagram:image" content="https://meganandian.com/image.png">
+    <meta name="instagram:title" content="Megan & Ian's Wedding - October 25, 2025">
+    <meta name="instagram:description" content="Join us for our wedding celebration! 💕">
     
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
@@ -427,9 +436,18 @@
                 font-size: 2.2rem; /* Much smaller on very small screens */
                 letter-spacing: 0px;
                 white-space: normal; /* Allow wrapping on very small screens */
-                line-height: 1.1;
+                line-height: 1.3; /* Increased line height to prevent overlap */
                 text-align: center; /* Center alignment */
                 margin-bottom: 30px; /* Adjust spacing for small screens */
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 360px) {
+            .header-text {
+                font-size: 1.9rem; /* Even smaller for very narrow screens */
+                line-height: 1.4; /* More generous line height */
+                margin-bottom: 25px;
             }
         }
 
@@ -915,7 +933,7 @@
                 letter-spacing: 0.3px; /* Tighter spacing on mobile */
                 margin-bottom: 40px; /* More space on mobile too */
                 white-space: normal; /* Allow wrapping on tablets */
-                line-height: 1.2;
+                line-height: 1.25; /* Better line height for tablets */
                 text-align: center; /* Center alignment */
             }
 
@@ -1339,7 +1357,7 @@
         const modalPassword = document.getElementById('modalPassword');
         const modalSubmit = document.getElementById('modalSubmit');
         const modalError = document.getElementById('modalError');
-        const correctPassword = 'milano1'; // Updated password
+        const correctPassword = 'milano'; // Wedding password
 
         function checkModalPassword() {
             if (modalPassword.value === correctPassword) {
