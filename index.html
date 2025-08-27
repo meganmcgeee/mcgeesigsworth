@@ -7,7 +7,7 @@
     <!-- Primary Meta Tags -->
     <title>Megan & Ian's Wedding - October 25, 2025 | Long Beach, CA</title>
     <meta name="title" content="Megan & Ian's Wedding - October 25, 2025 | Long Beach, CA">
-    <meta name="description" content="Join us for our wedding celebration at Grey LB in Long Beach, California. Ceremony at 4:30 PM, reception at 6:00 PM. RSVP and find all the details here!">
+    <meta name="description" content="Join us for our wedding celebration at Grey LB in Long Beach, California. Ceremony at 4:30 PM. RSVP and find all the details here!">
     <meta name="keywords" content="Megan McGeeSigsworth, Ian Sigsworth, wedding, Long Beach, Grey LB, October 2025, California wedding">
     <meta name="robots" content="noindex, nofollow">
     <meta name="language" content="English">
@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://meganandian.com/">
     <meta property="og:title" content="Megan & Ian's Wedding - October 25, 2025">
-    <meta property="og:description" content="Join us for our wedding celebration at Grey LB in Long Beach! 💕 Ceremony at 4:30 PM, reception at 6:00 PM. RSVP and find all details here.">
+    <meta property="og:description" content="Join us for our wedding celebration at Grey LB in Long Beach! 💕 Ceremony at 4:30 PM. RSVP and find all details here.">
     <meta property="og:image" content="https://meganandian.com/image.png">
     <meta property="og:image:secure_url" content="https://meganandian.com/image.png">
     <meta property="og:image:url" content="https://meganandian.com/image.png">
@@ -44,7 +44,7 @@
     <meta name="twitter:creator" content="@meganandian2025">
     <meta name="twitter:url" content="https://meganandian.com/">
     <meta name="twitter:title" content="Megan & Ian's Wedding - October 25, 2025">
-    <meta name="twitter:description" content="Join us for our wedding celebration at Grey LB in Long Beach! 💕 Ceremony at 4:30 PM, reception at 6:00 PM. RSVP and find all details here.">
+    <meta name="twitter:description" content="Join us for our wedding celebration at Grey LB in Long Beach! 💕 Ceremony at 4:30 PM. RSVP and find all details here.">
     <meta name="twitter:image" content="https://meganandian.com/image.png">
     <meta name="twitter:image:alt" content="Megan and Ian - Beautiful couple photo for their October 25, 2025 wedding">
     
@@ -61,7 +61,7 @@
     
     <!-- Rich Snippets / Schema.org -->
     <meta itemprop="name" content="Megan & Ian's Wedding">
-    <meta itemprop="description" content="Join us for our wedding celebration at Grey LB in Long Beach, California. Ceremony at 4:30 PM, reception at 6:00 PM.">
+    <meta itemprop="description" content="Join us for our wedding celebration at Grey LB in Long Beach, California. Ceremony at 5:00 PM, cocktail hour to follow, reception at 7:00 PM.">
     <meta itemprop="image" content="https://meganandian.com/image.png">
     
     <!-- Favicon -->
@@ -84,9 +84,9 @@
         "@context": "https://schema.org",
         "@type": "Event",
         "name": "Megan & Ian's Wedding",
-        "description": "Join us for our wedding celebration at Grey LB in Long Beach, California. Ceremony at 4:30 PM, reception at 6:00 PM.",
-        "startDate": "2025-10-25T16:30:00-07:00",
-        "endDate": "2025-10-25T23:00:00-07:00",
+        "description": "Join us for our wedding celebration at Grey LB in Long Beach, California. Ceremony at 5:00 PM, cocktail hour to follow, reception at 7:00 PM.",
+        "startDate": "2025-10-25T17:00:00-07:00",
+        "endDate": "2025-10-26T00:00:00-07:00",
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": {
@@ -395,12 +395,12 @@
         .couple-bottom-section {
             position: relative;
             width: 100vw;
-            height: 60vh;
-            min-height: 400px;
+            height: 70vh;
+            min-height: 500px;
             margin: 60px 0 0 0;
             background-image: url('./image.png');
             background-size: cover;
-            background-position: center;
+            background-position: center top; /* Focus on top of image to avoid cutting off faces */
             background-repeat: no-repeat;
             display: flex;
             align-items: center;
@@ -430,24 +430,52 @@
             text-align: center; /* Center-aligned */
         }
 
-        /* Mobile responsive header text */
-        @media (max-width: 480px) {
+        /* Mobile responsive header text - Force single line approach */
+        @media (max-width: 768px) {
             .header-text {
-                font-size: 2.2rem; /* Much smaller on very small screens */
-                letter-spacing: 0px;
-                white-space: normal; /* Allow wrapping on very small screens */
-                line-height: 1.3; /* Increased line height to prevent overlap */
-                text-align: center; /* Center alignment */
-                margin-bottom: 30px; /* Adjust spacing for small screens */
+                font-size: 2.0rem; /* Much smaller to force single line */
+                white-space: nowrap; /* Force single line */
+                line-height: 1.2; /* Normal line height */
+                margin-bottom: 35px;
+                overflow: hidden; /* Hide overflow if needed */
+                text-overflow: ellipsis; /* Add ... if text is too long */
+            }
+        }
+
+        @media (max-width: 620px) {
+            .header-text {
+                font-size: 1.8rem; /* Smaller for narrower screens */
+                line-height: 1.2; 
+                letter-spacing: -1px; /* Tighter letter spacing to fit */
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .header-text {
+                font-size: 1.6rem; /* Smaller for mobile */
+                line-height: 1.2;
+                letter-spacing: -1px;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .header-text {
+                font-size: 1.4rem; /* Smaller on very small screens */
+                line-height: 1.2;
+                letter-spacing: -1px;
+                margin-bottom: 25px;
             }
         }
 
         /* Extra small screens */
         @media (max-width: 360px) {
             .header-text {
-                font-size: 1.9rem; /* Even smaller for very narrow screens */
-                line-height: 1.4; /* More generous line height */
-                margin-bottom: 25px;
+                font-size: 1.2rem; /* Very small for very narrow screens */
+                line-height: 1.2;
+                letter-spacing: -1px;
+                margin-bottom: 20px;
             }
         }
 
@@ -567,8 +595,9 @@
             justify-content: center;
             opacity: 0;
             transition: opacity 0.3s ease;
-            pointer-events: none;
+            pointer-events: auto;
             z-index: 10;
+            cursor: pointer;
         }
 
         .map-container:hover .map-overlay {
@@ -601,6 +630,27 @@
             letter-spacing: 1px;
             z-index: 5;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .map-parking-icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--lucky-dress);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            z-index: 6;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .map-parking-icon:hover {
+            background: var(--cabernet);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
 
         .map-details {
@@ -929,12 +979,14 @@
                 padding: 15px;
             }
             .header-text {
-                font-size: 2.8rem; /* Slightly smaller on tablet */
-                letter-spacing: 0.3px; /* Tighter spacing on mobile */
+                font-size: 2.0rem; /* Much smaller to force single line */
+                letter-spacing: -1px; /* Tighter spacing to fit */
                 margin-bottom: 40px; /* More space on mobile too */
-                white-space: normal; /* Allow wrapping on tablets */
-                line-height: 1.25; /* Better line height for tablets */
+                white-space: nowrap; /* Force single line */
+                line-height: 1.2; /* Normal line height */
                 text-align: center; /* Center alignment */
+                overflow: hidden; /* Hide overflow if needed */
+                text-overflow: ellipsis; /* Add ... if text is too long */
             }
 
             .date-text {
@@ -984,9 +1036,10 @@
 
             /* Mobile Bottom Couple Photo - Full Bleed */
             .couple-bottom-section {
-                height: 50vh;
-                min-height: 300px;
+                height: 60vh;
+                min-height: 350px;
                 margin-top: 40px;
+                background-position: center center; /* Better mobile positioning */
             }
             .couple-bottom-container {
                 padding: 20px;
@@ -1079,6 +1132,12 @@
                 padding: 6px 12px;
                 font-size: 0.8rem;
             }
+            .map-parking-icon {
+                top: 10px;
+                left: 10px;
+                padding: 6px 10px;
+                font-size: 1rem;
+            }
             .map-click-hint {
                 padding: 12px 20px;
                 font-size: 1rem;
@@ -1148,13 +1207,9 @@
             <button class="rsvp-btn" onclick="scrollToRSVP()">RSVP</button>
             
             <p class="date-text">10.25.2025</p>
-            <p class="time-text">4:30 PM Ceremony | 6:00 PM Reception</p>
+            <p class="time-text">4:30 PM Ceremony, cocktail hour to follow | Reception with dinner and dancing until late</p>
 
-            <p class="address-text">
-                Grey LB<br>
-                237 Long Beach Blvd<br>
-                Long Beach, CA 90802
-            </p>
+
         </div>
     </div>
 
@@ -1164,23 +1219,23 @@
             <h2 class="map-title">Location</h2>
             <div class="map-container" onclick="openGoogleMaps()">
                 <div class="map-brand-corner">M & I</div>
+                <div class="map-parking-icon" onclick="openParkingMaps(event)">🅿️</div>
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.788!2d-118.194317!3d33.770127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd30f3d3ce2c8f%3A0x1234567890abcdef!2s237%20Long%20Beach%20Blvd%2C%20Long%20Beach%2C%20CA%2090802!5e0!3m2!1sen!2sus!4v1640995200000!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3317.8!2d-118.194!3d33.770!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x80dd313d3b6c8bb5%3A0x5c4b7a6e9c8f7a2b!2sHarvey%20Milk%20Plaza%2C%20Long%20Beach%2C%20CA!3m2!1d33.769456!2d-118.193645!4m5!1s0x80dd30f3d3ce2c8f%3A0x1234567890abcdef!2s237%20Long%20Beach%20Blvd%2C%20Long%20Beach%2C%20CA%2090802!3m2!1d33.770127!2d-118.194317!5e0!3m2!1sen!2sus!4v1640995200000!5m2!1sen!2sus"
                     width="100%" 
                     height="400" 
-                    style="border:0;" 
+                    style="border:0; pointer-events: auto;" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                <div class="map-overlay">
-                    <div class="map-click-hint">📍 Click for Directions</div>
-                </div>
+
             </div>
             <div class="map-details">
-                <h3>Grey LB</h3>
+                <h3>Grey LB 👰🤵</h3>
                 <p>237 Long Beach Blvd<br>Long Beach, CA 90802</p>
-                <p class="map-note">Parking is available on-site and nearby streets. Rideshare drop-off is recommended for convenience.</p>
+                <p><strong>Entrance:</strong> Located on Long Beach Blvd above <a href="https://www.recreationalcoffee.com/" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Recreational Coffee</a></p>
+                <p class="map-note">For transportation information see the FAQ</p>
             </div>
         </div>
     </div>
@@ -1188,14 +1243,11 @@
     <!-- Cabernet Section -->
     <div class="cabernet-section" data-section="rsvp">
         <div class="cabernet-content">
-            <p class="cabernet-description">
-                Join us for an evening of celebration and cherished moments. 
-                Let us know if you'll be celebrating with us.
-            </p>
+            <h2 style="font-family: 'Tan Pearl', serif; font-size: 2.5rem; margin-bottom: 30px; text-align: center;">Please let us know if you'll be able to celebrate with us</h2>
             
             <form class="rsvp-form" id="rsvpForm">
                 <div class="form-group">
-                    <label for="guestName">Your Name(s)</label>
+                    <label for="guestName">Name(s) on invitation</label>
                     <input type="text" id="guestName" name="guestName" placeholder="Enter your name(s)" required 
                        autocomplete="name" inputmode="text" enterkeyhint="next">
                 </div>
@@ -1205,25 +1257,22 @@
                 <div class="form-group">
                     <label for="attendance">Will you be attending?</label>
                     <select id="attendance" name="attendance" required>
-                        <option value="">Please select</option>
+                        <option value="" disabled selected style="display:none;">Please select</option>
                         <option value="yes">Yes, we'll be there!</option>
                         <option value="no">Sorry, can't make it</option>
-                        <option value="maybe">Not sure yet</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label>Number of guests</label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="guest1" name="guestCount" value="1" checked>
-                            <label for="guest1">Just me (1)</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="guest2" name="guestCount" value="2">
-                            <label for="guest2">Plus one (2)</label>
-                        </div>
-                    </div>
+                    <label for="guestEmail">Email address</label>
+                    <input type="email" id="guestEmail" name="guestEmail" placeholder="your.email@example.com" required 
+                           autocomplete="email" inputmode="email" enterkeyhint="next">
+                </div>
+                
+                <div class="form-group">
+                    <label for="guestPhone">Phone number</label>
+                    <input type="tel" id="guestPhone" name="guestPhone" placeholder="(555) 123-4567" required 
+                           autocomplete="tel" inputmode="tel" enterkeyhint="next">
                 </div>
                 
                 <div class="form-group">
@@ -1248,7 +1297,7 @@
                     <span class="faq-arrow">▼</span>
                 </button>
                 <div class="faq-answer" id="faq1">
-                    <p><strong>Long Beach Airport (LGB)</strong> is our top recommendation - it's right in the heart of the city, super convenient, and much less crowded than LAX! Alternatively, <strong>Los Angeles International Airport (LAX)</strong> is about 30 minutes away and has more flight options from international destinations.</p>
+                    <p><strong>Long Beach Airport (LGB)</strong> is our top recommendation - it's very close to the venue (only six miles on side streets), and never crowded. Alternatively, <strong>John Wayne Airport (SNA)</strong> in Santa Ana is another smaller, less crowded airport, though it is a further drive on the freeway. Finally, <strong>Los Angeles International Airport (LAX)</strong> is about 30 minutes away and has more flight options, however it is very crowded.</p>
                 </div>
             </div>
 
@@ -1258,28 +1307,34 @@
                     <span class="faq-arrow">▼</span>
                 </button>
                 <div class="faq-answer" id="faq2">
-                    <p>We recommend staying in the charming Belmont Shore area, near the Naples canals, or in the vibrant 2nd Street corridor. For the best experience, we suggest staying below 5th Street - these areas offer wonderful dining, shopping, and are close to our venue.</p>
-                    <p><strong>Hotel Recommendations:</strong> The Varden, The Breakers, The Hilton Long Beach, and The Westin Long Beach are all excellent choices in great locations!</p>
+                    <p>There are a plethora of hotels in the immediate vicinity of the venue. Here are a few of our recommendations:</p>
+                    <p><strong>Best Western Plus at the Convention Center</strong> - <a href="https://www.bestwestern.com/en_US/book/hotel-rooms.05642.html?iata=00171880&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:05642" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Book here</a></p>
+                    <p><strong>Courtyard Long Beach Downtown</strong> - <a href="https://www.marriott.com/en-us/hotels/lgbcy-courtyard-long-beach-downtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Book here</a></p>
+                    <p><strong>The Westin Long Beach</strong> - <a href="https://www.marriott.com/en-us/hotels/lgbwi-the-westin-long-beach/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Book here</a></p>
+                    <p><strong>Marriott Long Beach</strong> - <a href="https://www.marriott.com/en-us/hotels/lgbmc-marriott-long-beach-downtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Book here</a></p>
+                    <p>If you have any questions or concerns about a specific hotel or rental location, feel free to reach out to us and we can let you know our thoughts!</p>
                 </div>
             </div>
 
+
+
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFAQ(3)">
-                    <span>How do we get to the wedding?</span>
+                    <span>Can we bring our kids?</span>
                     <span class="faq-arrow">▼</span>
                 </button>
                 <div class="faq-answer" id="faq3">
-                    <p>Transportation will be provided from major hotel areas to the wedding venue. We'll arrange shuttle buses and provide detailed pickup times and locations closer to the date.</p>
+                    <p>We love your little ones but due to venue size restrictions we're hosting an adults-only celebration, however children under the age of 2 are welcome.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFAQ(4)">
-                    <span>Can we bring our kids?</span>
+                    <span>How do we get to the wedding?</span>
                     <span class="faq-arrow">▼</span>
                 </button>
                 <div class="faq-answer" id="faq4">
-                    <p>We love your little ones! To create an intimate atmosphere, we're hosting an adults-only celebration. However, children under 5 are warmly welcome throughout the entire event. We'll have special accommodations and kid-friendly options available for our youngest guests.</p>
+                    <p>Public parking is available at City Lot C at 124E W 4th St. Uber, Lyft, or other rideshare is always recommended!</p>
                 </div>
             </div>
 
@@ -1289,7 +1344,7 @@
                     <span class="faq-arrow">▼</span>
                 </button>
                 <div class="faq-answer" id="faq5">
-                    <p>Coastal elegant attire. Think flowing dresses, light fabrics, and colors that complement the beautiful beachside setting. Avoid black and white, and consider the lovely California ocean breeze when choosing your outfit!</p>
+                    <p>Funky Formal - dress up, but don't be afraid to be creative!</p>
                 </div>
             </div>
 
@@ -1299,50 +1354,61 @@
                     <span class="faq-arrow">▼</span>
                 </button>
                 <div class="faq-answer" id="faq6">
-                    <p>The ceremony begins at 4:30 PM. Please arrive by 4:00 PM to find your seats and enjoy a welcome drink. The reception will follow immediately after with dinner and dancing until late!</p>
+                    <p>The venue will open at 4:30 PM. Beverages and snacks will be served. Please ensure you arrive by 5:00 PM to find your seat before the ceremony.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFAQ(7)">
-                    <span>Safety tips for exploring Long Beach?</span>
+                    <span>What is the area like?</span>
                     <span class="faq-arrow">▼</span>
                 </button>
                 <div class="faq-answer" id="faq7">
-                    <p>Long Beach is generally very welcoming! We recommend sticking to the well-lit downtown areas, Belmont Shore, and the waterfront districts for the best experience. The 2nd Street area and beach paths are particularly lovely for evening strolls.</p>
+                    <p>Downtown Long Beach is a great location that accommodates tourists for major events throughout the year such as the annual Grand Prix, music festivals, as well as numerous conventions and tradeshows. The neighborhood around the venue has many great restaurants, shops, and bars, and Long Beach is overall a very walkable city. That said, it is the downtown centre of a city of a half a million people, and should be understood like any other major city.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFAQ(8)">
-                    <span>Restaurant recommendations?</span>
+                    <span>Any other food/drink/activity recommendations?</span>
                     <span class="faq-arrow">▼</span>
                 </button>
                 <div class="faq-answer" id="faq8">
-                    <p>Must-tries: 555 East (steakhouse), The Attic (Southern comfort food), Beachwood Brewing (local craft beer), and Parkers' Lighthouse for waterfront dining. The 2nd Street corridor has amazing options too! We'll share a detailed food guide with our favorites.</p>
+                    <p>Long Beach is chock full of great places to eat and drink. Check in later for a full list of our favorites!</p>
                 </div>
             </div>
 
-                            <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(9)">
-                        <span>Getting around Long Beach?</span>
-                        <span class="faq-arrow">▼</span>
-                    </button>
-                    <div class="faq-answer" id="faq9">
-                        <p>Long Beach is very walkable, especially around downtown and the waterfront! Use rideshare apps like Uber or Lyft for convenience, or rent bikes to cruise the beach paths. Parking can be busy near the water, so allow extra time or consider walking from nearby areas.</p>
-                    </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(9)">
+                    <span>Getting around Long Beach</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer" id="faq9">
+                    <p>Long Beach is very walkable, especially around downtown and the waterfront. Parking, however, is notoriously terrible in most parts of the city. We highly recommend using rideshare apps like Uber or Lyft for convenience. The city of Long Beach also offers a free rideshares throughout the extended waterfront neighborhoods called Circuit, which can be downloaded from here: <a href="https://www.ridecircuit.com/long-beach" target="_blank" style="color: var(--cabernet); text-decoration: underline;">https://www.ridecircuit.com/long-beach</a></p>
                 </div>
+            </div>
 
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(10)">
-                        <span>What about gifts and registry?</span>
-                        <span class="faq-arrow">▼</span>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(10)">
+                    <span>Is there a wedding registry?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer" id="faq10">
+                    <p>Your presence is the only present we need! We won't have a traditional registry, but if you'd like to contribute, we'll have a honeymoon fund to help us create amazing memories together. We will be donating a portion of this fund to the Aquarium of the Pacific - the special place where we first met and fell in love! 🐠💙 Check back in later for details!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Couple Bottom Photo Section -->
                     </button>
-                    <div class="faq-answer" id="faq10">
+                    <div class="faq-answer" id="faq8">
                         <p>Your presence is the only present we need! We won't have a traditional registry, but if you'd like to contribute, we'll have a honeymoon fund to help us create amazing memories together.</p>
                         <p>For those who prefer to give to a meaningful cause, we'd be honored if you made a donation to the <strong>Aquarium of the Pacific</strong> - the special place where we first met and fell in love! 🐠💙</p>
                     </div>
                 </div>
+
+
         </div>
     </div>
 
@@ -1597,6 +1663,14 @@
         function openGoogleMaps() {
             const address = "237 Long Beach Blvd, Long Beach, CA 90802";
             const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+            window.open(mapsUrl, '_blank');
+        }
+
+        // Parking map function
+        function openParkingMaps(event) {
+            event.stopPropagation(); // Prevent triggering the main map click
+            const parkingAddress = "Harvey Milk Plaza, Long Beach, CA";
+            const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(parkingAddress)}`;
             window.open(mapsUrl, '_blank');
         }
 
