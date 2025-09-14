@@ -479,6 +479,21 @@
             }
         }
 
+        /* Welcome party responsive styles */
+        @media (max-width: 768px) {
+            .welcome-party-info p {
+                font-size: 1.0rem !important;
+                margin: 15px 0 !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome-party-info p {
+                font-size: 0.9rem !important;
+                margin: 10px 0 !important;
+            }
+        }
+
 
         .date-text {
             font-size: 2rem; /* Larger for seniors */
@@ -1203,6 +1218,13 @@
     <div class="container" id="mainContent" style="display:none;">
         <div id="content" data-section="home">
             <h1 class="header-text">Megan & Ian</h1>
+            
+            <div class="welcome-party-info">
+                <p style="font-family: 'Forum', serif; font-size: 1.1rem; color: var(--cabernet); margin: 20px 0; text-align: center; line-height: 1.6;">
+                    Join us for a casual welcome party at Long Beach Beer Lab<br>
+                    Friday, October 24th from 6-9 PM
+                </p>
+            </div>
             
             <button class="rsvp-btn" onclick="scrollToRSVP()">RSVP</button>
             
