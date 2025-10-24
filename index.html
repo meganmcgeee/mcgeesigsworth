@@ -901,7 +901,7 @@
         }
         
         .faq-answer.open {
-            max-height: 500px; /* Increased for more content */
+            max-height: 1000px; /* Much larger to accommodate all restaurant listings */
             padding: 0 0 25px 0;
         }
         
@@ -1073,7 +1073,7 @@
                 font-size: 1.2rem; /* Larger for mobile seniors */
             }
             .faq-answer.open {
-                max-height: 600px; /* Even more space on mobile for content */
+                max-height: 900px; /* Much more space on mobile for all restaurant listings */
                 padding: 0 0 30px 0;
             }
             .cabernet-description {
@@ -1224,7 +1224,11 @@
         <div id="content" data-section="home">
             <h1 class="header-text">Megan & Ian</h1>
             
-            <button class="rsvp-btn" onclick="scrollToSection('faq')">Dining & Entertainment Nearby</button>
+            <button class="rsvp-btn" onclick="scrollToSection('location')">Venue & Parking</button>
+            
+            <div style="margin: 20px 0; text-align: center;">
+                <button class="rsvp-btn" onclick="scrollToSection('faq')" style="background: var(--lucky-dress); font-size: 1.2rem; padding: 15px 35px;">Dining & Entertainment Nearby</button>
+            </div>
             
             <!-- Honeymoon Fund Link - Front and Center -->
             <div style="margin: 30px 0; text-align: center;">
@@ -1244,7 +1248,7 @@
 
             <div class="welcome-party-info">
                 <p style="font-family: 'Forum', serif; font-size: 1.4rem; color: var(--cabernet); margin: 30px 0; text-align: center; line-height: 1.6; font-weight: 500;">
-                    Join us for a casual welcome party at Long Beach Beer Lab<br>
+                    Join us for a casual welcome party at <a href="https://www.google.com/maps/search/?api=1&query=Long+Beach+Beer+Lab+Willow+Long+Beach+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Long Beach Beer Lab (Willow location)</a><br>
                     Friday, October 24th from 6-9 PM
                 </p>
             </div>
@@ -1272,7 +1276,7 @@
             </div>
             <div class="map-details">
                 <h3>Grey LB 👰🤵</h3>
-                <p>237 Long Beach Blvd<br>Long Beach, CA 90802</p>
+                <p>237 Long Beach Blvd Suite A<br>Long Beach, CA 90802</p>
                 <p><strong>Entrance:</strong> Located on Long Beach Blvd above <a href="https://www.recreationalcoffee.com/" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Recreational Coffee</a></p>
                 <p class="map-note">For transportation information see the FAQ</p>
             </div>
@@ -1328,95 +1332,57 @@
     <!-- FAQ Section -->
     <div class="faq-section" data-section="faq">
         <div class="faq-content">
-            <h2 class="faq-title">FAQs</h2>
+            <h2 class="faq-title">Wedding Day Guide</h2>
             
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFAQ(1)">
-                    <span>Where do we fly into?</span>
-                    <span class="faq-arrow">▼</span>
-                </button>
-                <div class="faq-answer" id="faq1">
-                    <p><strong>Long Beach Airport (LGB)</strong> is our top recommendation - it's very close to the venue (only six miles on side streets), and never crowded. Alternatively, <strong>John Wayne Airport (SNA)</strong> in Santa Ana is another smaller, less crowded airport, though it is a further drive on the freeway. Finally, <strong>Los Angeles International Airport (LAX)</strong> is about 30 minutes away and has more flight options, however it is very crowded.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFAQ(2)">
-                    <span>Where do we stay?</span>
-                    <span class="faq-arrow">▼</span>
-                </button>
-                <div class="faq-answer" id="faq2">
-                    <p>There are a plethora of hotels in the immediate vicinity of the venue. Here are a few of our recommendations:</p>
-                    <p><strong>Best Western Plus at the Convention Center</strong> - <a href="https://www.bestwestern.com/en_US/book/hotel-rooms.05642.html?iata=00171880&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:05642" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Book here</a></p>
-                    <p><strong>Courtyard Long Beach Downtown</strong> - <a href="https://www.marriott.com/en-us/hotels/lgbcy-courtyard-long-beach-downtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Book here</a></p>
-                    <p><strong>The Westin Long Beach</strong> - <a href="https://www.marriott.com/en-us/hotels/lgbwi-the-westin-long-beach/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Book here</a></p>
-                    <p><strong>Marriott Long Beach</strong> - <a href="https://www.marriott.com/en-us/hotels/lgbmc-marriott-long-beach-downtown/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Book here</a></p>
-                    <p>If you have any questions or concerns about a specific hotel or rental location, feel free to reach out to us and we can let you know our thoughts!</p>
-                </div>
-            </div>
-
-
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFAQ(3)">
-                    <span>Can we bring our kids?</span>
-                    <span class="faq-arrow">▼</span>
-                </button>
-                <div class="faq-answer" id="faq3">
-                    <p>We love your little ones but due to venue size restrictions we're hosting an adults-only celebration, however children under the age of 2 are welcome.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFAQ(4)">
-                    <span>How do we get to the wedding?</span>
-                    <span class="faq-arrow">▼</span>
-                </button>
-                <div class="faq-answer" id="faq4">
-                    <p>Public parking is available at City Lot C at 124E W 4th St. Uber, Lyft, or other rideshare is always recommended!</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFAQ(5)">
-                    <span>What's the dress code?</span>
-                    <span class="faq-arrow">▼</span>
-                </button>
-                <div class="faq-answer" id="faq5">
-                    <p>Funky Formal - dress up, but don't be afraid to be creative!</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFAQ(6)">
                     <span>What time should we arrive for the wedding?</span>
                     <span class="faq-arrow">▼</span>
                 </button>
-                <div class="faq-answer" id="faq6">
+                <div class="faq-answer" id="faq1">
                     <p>The venue will open at 4:30 PM. Beverages and snacks will be served. Please ensure you arrive by 5:00 PM to find your seat before the ceremony.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFAQ(7)">
-                    <span>What is the area like?</span>
+                <button class="faq-question" onclick="toggleFAQ(2)">
+                    <span>Where do we park?</span>
                     <span class="faq-arrow">▼</span>
                 </button>
-                <div class="faq-answer" id="faq7">
-                    <p>Downtown Long Beach is a great location that accommodates tourists for major events throughout the year such as the annual Grand Prix, music festivals, as well as numerous conventions and tradeshows. The neighborhood around the venue has many great restaurants, shops, and bars, and Long Beach is overall a very walkable city. That said, it is the downtown centre of a city of a half a million people, and should be understood like any other major city.</p>
+                <div class="faq-answer" id="faq2">
+                    <p><strong>Convenient parking right next to the venue!</strong> There is parking available directly adjacent to Grey LB. Additionally, public parking is available at City Lot East (entrance on Long Beach Blvd). Uber, Lyft, or other rideshare is always recommended!</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFAQ(8)">
-                    <span>Any other food/drink/activity recommendations?</span>
+                <button class="faq-question" onclick="toggleFAQ(3)">
+                    <span>What's the dress code?</span>
                     <span class="faq-arrow">▼</span>
                 </button>
-                <div class="faq-answer" id="faq8">
-                    <p>Long Beach is chock full of great places to eat and drink. Here are some of our favorite spots for coffee and food in downtown Long Beach:</p>
+                <div class="faq-answer" id="faq3">
+                    <p>Funky Formal - dress up, but don't be afraid to be creative!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(4)">
+                    <span>What's happening in downtown Long Beach on October 25th?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer" id="faq4">
                     <p><strong>Special Event Alert:</strong> Downtown Long Beach is hosting a "Halloween Party Promenade" (Fright Fest) on Saturday, October 25th from 2 PM to 10 PM at Pine Avenue and The Promenade (between Broadway and 3rd Street). This all-day Halloween takeover features themed entertainment, drinks, food from local businesses, and a Halloween parade! <a href="https://www.visitlongbeach.com/events/downtowns-fright-fest/" target="_blank" style="color: var(--cabernet); text-decoration: underline;">More info here</a></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(5)">
+                    <span>Where should we eat and drink nearby?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer" id="faq5">
+                    <p>Long Beach is chock full of great places to eat and drink. Here are some of our favorite spots for coffee and food in downtown Long Beach:</p>
                     <p><strong>Dining Recommendations:</strong></p>
-                    <p><strong>Recreational Coffee</strong> (<a href="https://www.google.com/maps/search/?api=1&query=237+Long+Beach+Blvd,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">237 Long Beach Blvd</a>) - Located right below our venue! Perfect for coffee, light meals, and casual dining.</p>
+                    <p><strong>Recreational Coffee</strong> (<a href="https://www.google.com/maps/search/?api=1&query=237+Long+Beach+Blvd+Suite+A,+Long+Beach,+CA+90802" target="_blank" style="color: var(--cabernet); text-decoration: underline;">237 Long Beach Blvd Suite A</a>) - Located right below our venue! Perfect for coffee, light meals, and casual dining.</p>
                     <p><strong>Midnight Oil</strong> (<a href="https://www.google.com/maps/search/?api=1&query=532+E+1st+St,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">532 E 1st St</a>) - A local favorite for specialty coffee and all-day dining options. They also have 3 speakeasies for evening drinks!</p>
                     <p><strong>Breakfast Bar</strong> (<a href="https://www.google.com/maps/search/?api=1&query=70+Atlantic+Ave,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">70 Atlantic Ave</a>) - Great for breakfast, lunch, and hearty comfort food dishes.</p>
                     <p><strong>The Ordinarie</strong> (<a href="https://www.google.com/maps/search/?api=1&query=210+The+Promenade+N,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">210 The Promenade N</a>) - Currently an amazing Halloween pop-up with great drinks and New American food. Trendy spot with creative offerings.</p>
@@ -1430,12 +1396,22 @@
             </div>
 
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFAQ(9)">
+                <button class="faq-question" onclick="toggleFAQ(8)">
                     <span>Getting around Long Beach</span>
                     <span class="faq-arrow">▼</span>
                 </button>
-                <div class="faq-answer" id="faq9">
+                <div class="faq-answer" id="faq8">
                     <p>Long Beach is very walkable, especially around downtown and the waterfront. Parking, however, is notoriously terrible in most parts of the city. We highly recommend using rideshare apps like Uber or Lyft for convenience. The city of Long Beach also offers a free rideshares throughout the extended waterfront neighborhoods called Circuit, which can be downloaded from here: <a href="https://www.ridecircuit.com/long-beach" target="_blank" style="color: var(--cabernet); text-decoration: underline;">https://www.ridecircuit.com/long-beach</a></p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(9)">
+                    <span>Where should we fly into?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer" id="faq9">
+                    <p><strong>Long Beach Airport (LGB)</strong> is our top recommendation - it's very close to the venue (only six miles on side streets), and never crowded. Alternatively, <strong>John Wayne Airport (SNA)</strong> in Santa Ana is another smaller, less crowded airport, though it is a further drive on the freeway. Finally, <strong>Los Angeles International Airport (LAX)</strong> is about 30 minutes away and has more flight options, however it is very crowded.</p>
                 </div>
             </div>
 
@@ -1445,7 +1421,8 @@
                     <span class="faq-arrow">▼</span>
                 </button>
                 <div class="faq-answer" id="faq10">
-                    <p>Your presence is the only present we need! We won't have a traditional registry, but if you'd like to contribute, we'll have a honeymoon fund to help us create amazing memories together. We will be donating a portion of this fund to the Aquarium of the Pacific - the special place where we first met and fell in love! 🐠💙 Check back in later for details!</p>
+                    <p>Your presence is the only present we need! We won't have a traditional registry, but if you'd like to contribute, we have a honeymoon fund to help us create amazing memories together. We will be donating a portion of this fund to the Aquarium of the Pacific - the special place where we first met and fell in love! 🐠💙</p>
+                    <p><strong><a href="https://www.honeyfund.com/site/mcgee-sigsworth-10-25-2025#module_registry_items" target="_blank" style="color: var(--cabernet); text-decoration: underline;">Visit our Honeymoon Fund here!</a></strong></p>
                 </div>
             </div>
         </div>
@@ -1712,7 +1689,7 @@
 
         // Map interaction function
         function openGoogleMaps() {
-            const address = "237 Long Beach Blvd, Long Beach, CA 90802";
+            const address = " Long Beach Blvd, Long Beach, CA";
             const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
             window.open(mapsUrl, '_blank');
         }
@@ -1720,7 +1697,7 @@
         // Parking map function
         function openParkingMaps(event) {
             event.stopPropagation(); // Prevent triggering the main map click
-            const parkingAddress = "Harvey Milk Plaza, Long Beach, CA";
+            const parkingAddress = "237 Long Beach Blvd Suite A, Long Beach, CA 90802";
             const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(parkingAddress)}`;
             window.open(mapsUrl, '_blank');
         }
