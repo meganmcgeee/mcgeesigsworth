@@ -901,7 +901,7 @@
         }
         
         .faq-answer.open {
-            max-height: 300px; /* Keep increased for better content display */
+            max-height: 500px; /* Increased for more content */
             padding: 0 0 25px 0;
         }
         
@@ -1072,6 +1072,10 @@
             .faq-answer p {
                 font-size: 1.2rem; /* Larger for mobile seniors */
             }
+            .faq-answer.open {
+                max-height: 600px; /* Even more space on mobile for content */
+                padding: 0 0 30px 0;
+            }
             .cabernet-description {
                 font-size: 1.2rem;
             }
@@ -1220,17 +1224,17 @@
         <div id="content" data-section="home">
             <h1 class="header-text">Megan & Ian</h1>
             
-            <button class="rsvp-btn" onclick="scrollToRSVP()">RSVP</button>
+            <button class="rsvp-btn" onclick="scrollToSection('faq')">Dining & Entertainment Nearby</button>
             
             <!-- Honeymoon Fund Link - Front and Center -->
             <div style="margin: 30px 0; text-align: center;">
                 <a href="https://www.honeyfund.com/site/mcgee-sigsworth-10-25-2025#module_registry_items" target="_blank" 
-                   style="display: inline-block; background: var(--lucky-dress); color: white; padding: 18px 45px; 
+                   style="display: inline-block; background: var(--cabernet); color: white; padding: 18px 45px; 
                           font-family: 'Belleza', 'Forum', sans-serif; font-size: 1.3rem; font-weight: 600; 
                           text-decoration: none; border-radius: 0; letter-spacing: 0.5px; 
-                          transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(212, 133, 138, 0.3);"
-                   onmouseover="this.style.background='var(--cabernet)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(139, 38, 53, 0.4)';"
-                   onmouseout="this.style.background='var(--lucky-dress)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(212, 133, 138, 0.3)';">
+                          transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(139, 38, 53, 0.3);"
+                   onmouseover="this.style.background='var(--garnet)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(93, 26, 40, 0.4)';"
+                   onmouseout="this.style.background='var(--cabernet)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(139, 38, 53, 0.3)';">
                     Honeymoon Fund
                 </a>
             </div>
@@ -1410,14 +1414,17 @@
                 </button>
                 <div class="faq-answer" id="faq8">
                     <p>Long Beach is chock full of great places to eat and drink. Here are some of our favorite spots for coffee and food in downtown Long Beach:</p>
+                    <p><strong>Special Event Alert:</strong> Downtown Long Beach is hosting a "Halloween Party Promenade" (Fright Fest) on Saturday, October 25th from 2 PM to 10 PM at Pine Avenue and The Promenade (between Broadway and 3rd Street). This all-day Halloween takeover features themed entertainment, drinks, food from local businesses, and a Halloween parade! <a href="https://www.visitlongbeach.com/events/downtowns-fright-fest/" target="_blank" style="color: var(--cabernet); text-decoration: underline;">More info here</a></p>
                     <p><strong>Dining Recommendations:</strong></p>
-                    <p><strong>Recreational Coffee</strong> - Located right below our venue! Perfect for coffee, light meals, and casual dining.</p>
-                    <p><strong>Midnight Oil</strong> - A local favorite for specialty coffee and all-day dining options.</p>
-                    <p><strong>Breakfast Bar</strong> - Great for breakfast, lunch, and hearty comfort food dishes.</p>
-                    <p><strong>The Ordinarie</strong> - Trendy spot with artisanal coffee and creative lunch and dinner offerings.</p>
-                    <p><strong>555 Steakhouse</strong> - Upscale dining experience perfect for dinner and special occasions.</p>
-                    <p><strong>Buen Provecho</strong> - Authentic Mexican cuisine serving breakfast, lunch, and dinner with traditional dishes.</p>
-                    <p><strong>Ammatoli</strong> - Mediterranean-inspired restaurant with fresh, flavorful options for lunch and dinner.</p>
+                    <p><strong>Recreational Coffee</strong> (<a href="https://www.google.com/maps/search/?api=1&query=237+Long+Beach+Blvd,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">237 Long Beach Blvd</a>) - Located right below our venue! Perfect for coffee, light meals, and casual dining.</p>
+                    <p><strong>Midnight Oil</strong> (<a href="https://www.google.com/maps/search/?api=1&query=532+E+1st+St,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">532 E 1st St</a>) - A local favorite for specialty coffee and all-day dining options. They also have 3 speakeasies for evening drinks!</p>
+                    <p><strong>Breakfast Bar</strong> (<a href="https://www.google.com/maps/search/?api=1&query=70+Atlantic+Ave,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">70 Atlantic Ave</a>) - Great for breakfast, lunch, and hearty comfort food dishes.</p>
+                    <p><strong>The Ordinarie</strong> (<a href="https://www.google.com/maps/search/?api=1&query=210+The+Promenade+N,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">210 The Promenade N</a>) - Currently an amazing Halloween pop-up with great drinks and New American food. Trendy spot with creative offerings.</p>
+                    <p><strong>555 Steakhouse</strong> (<a href="https://www.google.com/maps/search/?api=1&query=555+E+Ocean+Blvd,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">555 E Ocean Blvd</a>) - Upscale dining experience perfect for dinner and special occasions.</p>
+                    <p><strong>Buen Provecho</strong> (<a href="https://www.google.com/maps/search/?api=1&query=546+E+4th+St,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">546 E 4th St</a>) - Authentic Mexican cuisine serving breakfast, lunch, and dinner with traditional dishes.</p>
+                    <p><strong>Ammatoli</strong> (<a href="https://www.google.com/maps/search/?api=1&query=201+E+3rd+St,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">201 E 3rd St</a>) - Mediterranean-inspired restaurant with fresh, flavorful options for lunch and dinner.</p>
+                    <p><strong>Beechwood Brewing</strong> (<a href="https://www.google.com/maps/search/?api=1&query=210+E+3rd+St,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">210 E 3rd St</a>) - Local craft brewery with great beer selection and casual dining atmosphere.</p>
+                    <p><strong>ISM</strong> (<a href="https://www.google.com/maps/search/?api=1&query=4+Pine+Ave,+Long+Beach,+CA" target="_blank" style="color: var(--cabernet); text-decoration: underline;">4 Pine Ave</a>) - Trendy cocktail bar and restaurant with innovative drinks and modern cuisine.</p>
                     <p>All of these spots are within walking distance of the venue and downtown hotels!</p>
                 </div>
             </div>
